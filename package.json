@@ -2,9 +2,12 @@
     "name": "moment-util",
     "version": "0.0.1",
     "description": "Create moment npm package",
-    "main": "index.ts",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "scripts": {
-        "build" : "tsc"
+        "build" : "tsc",
+        "prepare": "npm run build",
+        "postversion": "git push"
     },
     "dependencies": {
         "moment": "^2.29.1"
@@ -14,5 +17,12 @@
     "license": "MIT",
     "devDependencies": {
         "typescript": "^4.2.4"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SRIVIDHYAPUGAL/first-npm.git"
+    },
+    "files": [
+        "lib/**/*"
+    ]     
 }
